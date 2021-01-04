@@ -20,7 +20,7 @@ Here's a sample output where the unit chosen to display the amounts is in $ USD.
 Once visualchannel.py is downloaded, it should be made executable as follows:
 
 ```bash
-$ sudo chmod a+x visualchannel.py
+$ sudo chmod a+x visual-channels.py
 ```
 
 For clarity and ease of use, you can store it in the c-lightning plug-in directory, which should be in:
@@ -43,5 +43,19 @@ $ lightningd --plugin-dir=/usr/libexec/c-ligthning/plugins/
 
 Note that the plug-in directory must be specified in addition to the options used to run lightningd.
 
+## Instructions
 
+To call the plug-in use the lightning command line interface:
+
+```bash
+$ lightning-cli -H visualchannels [unit]
+```
+
+Unit can be one of the following:
+
+1. **BTC/btc/bitcoin/satoshi/sathoshis/**: the amounts displayed by the plug-in will be in satoshis.
+2. **EUR/eur/euro/euros**: the amounts displayed will be in EUR.
+3. **USD/usd/dollar/dollars**: the amounts displayed will be in USD.
+
+In the case in which unit isn't specified, or it's misspelled, the default unit that will be used is **sat**.
 
