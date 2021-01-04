@@ -59,3 +59,5 @@ Unit can be one of the following:
 
 In the case in which unit isn't specified, or it's misspelled, the default unit that will be used is **sat**.
 
+Note: since the command line interface doesn't allow for pretty-printing, the -H (Human Readable) modifier must be specified so that the output of the plug-in is formatted as in the picture above, otherwise it wouldn't be as interpretable as it is.
+
