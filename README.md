@@ -11,9 +11,37 @@ The plug-in adds the visualchannel command to the lightning command line interfa
 
 Here's a sample output where the unit chosen to display the amounts is in $ USD. 
 
-![](/home/joukowski/Documents/Fintech/LightningNetwork/plugins/imgs/sample_output.png)
+![](https://github.com/RiccardoRossetto/LN-channel-visualization/blob/master/imgs/sample_output.png)
 
 
 
 ## Getting Started:
+
+Once visualchannel.py is downloaded, it should be made executable as follows:
+
+```bash
+$ sudo chmod a+x visualchannel.py
+```
+
+For clarity and ease of use, you can store it in the c-lightning plug-in directory, which should be in:
+
+```bash
+/usr/libexec/c-lightning/plugins/
+```
+
+To install the required libraries use the following command:
+
+```bash
+$ pip3 install -r requirements.txt
+```
+
+Then when running c-lightning, it is sufficient to specify the plug-in directory to have it loaded and ready to be used.
+
+```bash
+$ lightningd --plugin-dir=/usr/libexec/c-ligthning/plugins/
+```
+
+Note that the plug-in directory must be specified in addition to the options used to run lightningd.
+
+
 
