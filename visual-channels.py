@@ -104,7 +104,7 @@ def visualchannels(unit = None):
     else:
         unit = units.get(unit, "sat")
 
-    # Set Exhcnage Rates:
+    # Set Exchange Rates:
     if unit == "EUR":
         exchange_rate = cryptocompare.get_price('BTC', curr = "EUR")
         exchange_rate = exchange_rate['BTC']['EUR'] / (10 ** 7)
