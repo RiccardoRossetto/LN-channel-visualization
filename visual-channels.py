@@ -29,7 +29,6 @@ units = {
 }
 
 
-
 def header(own, counterparty, unit):
     own = " ->   OWN FUNDS: " + "{:.2f}".format(own) + f" {unit}"
     counterparty = "COUNTERPARTY FUNDS: " + "{:.2f}".format(counterparty) + f" {unit}"
@@ -55,7 +54,6 @@ def distribution(own, counterparty, unit):
     bar = imbalance_bar(own, counterparty)
     distribution = [" ", " ", head, " ", bar, " "]
     return distribution
-
 
 
 def compute_metrics(channels, unit, rate):
