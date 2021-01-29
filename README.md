@@ -59,5 +59,16 @@ Unit can be one of the following:
 
 In the case in which unit isn't specified, or it's misspelled, the default unit that will be used is **sat**.
 
-Note: since the command line interface doesn't allow for pretty-printing, the -H (Human Readable) modifier must be specified so that the output of the plug-in is formatted as in the picture above, otherwise it wouldn't be as interpretable as it is.
+###### Remark: 
 
+since the command line interface doesn't allow for pretty-printing, the -H (Human Readable) modifier must be specified so that the output of the plug-in is formatted as in the picture above, otherwise it wouldn't be as interpretable as it is.
+
+###### Remark 2:
+
+this plug-in was inspired by Rene Pickhardt's simple funds overview plug-in, which can be found [here.](https://github.com/renepickhardt/c-lightning-plugin-collection/tree/master/simpleFundsOverview) 
+
+###### Disclaimer: 
+
+The requests this plug-in makes to the cryptocompare API, are **NOT** made through Tor. 
+
+This could be the motif of a further development for this plug-in.
