@@ -29,12 +29,16 @@ units = {
 }
 
 
+# Returns the header to the imbalance bar:
+
 def header(own, counterparty, unit):
     own = " ->   OWN FUNDS: " + "{:.2f}".format(own) + f" {unit}"
     counterparty = "COUNTERPARTY FUNDS: " + "{:.2f}".format(counterparty) + f" {unit}"
     header = own.ljust(35, " ") + counterparty.rjust(42, " ")
     return header
 
+
+# Returns the imbalance bar according to the funds' distribution:
 
 def imbalance_bar(own, counterparty):
     bar_len = 70
@@ -48,6 +52,9 @@ def imbalance_bar(own, counterparty):
     return imbalance_bar
 
 
+# Couples the header and imbalance bar with proper formatting to be displayed
+# with a Human Readable format:
+
 def distribution(own, counterparty, unit):
     distribution = []
     head = header(own, counterparty, unit)
@@ -55,6 +62,9 @@ def distribution(own, counterparty, unit):
     distribution = [" ", " ", head, " ", bar, " "]
     return distribution
 
+
+# Extrapolate from the channels json all the info to be displayed by the
+# plugin:
 
 def compute_metrics(channels, unit, rate):
     channels_list = []
@@ -83,6 +93,8 @@ def compute_metrics(channels, unit, rate):
         channels_list.append(channels_dict)
     return channels_list
 
+
+# Plugin method:
 
 @plugin.method("visualchannels")
 def visualchannels(unit = None):
@@ -117,6 +129,8 @@ def visualchannels(unit = None):
     channels_list = compute_metrics(channels, unit, exchange_rate)
     return channels_list
 
+
+# Plugin Initiaization with some logs to console:
 
 @plugin.init()
 def init(options, configuration, plugin):
